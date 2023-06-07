@@ -8,55 +8,71 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
-            if (!items[i].name.equals("Aged Brie")
-                    && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                if (items[i].quality > 0) {
-                    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                        items[i].quality = items[i].quality - 1;
-                    }
-                }
+        for (Item item : items) {
+            if (isSpecialItem(item, Constants.LEGENDARY)) {
+                continue;
+            }
+            if (isSpecialItem(item, Constants.AGED_BRIE)) {
+                updateAgedBrieQuality(item);
+            } else if (isSpecialItem(item, Constants.BACKSTAGE_PASS)) {
+                updateBackstagePassesQuality(item);
+            } else if (isSpecialItem(item, Constants.CONJURER)) {
+                updateConjuredItemQuality(item);
             } else {
-                if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1;
-
-                    if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1;
-                            }
-                        }
-
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1;
-                            }
-                        }
-                    }
-                }
+                updateNormalItemQuality(item);
             }
-
-            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                items[i].sellIn = items[i].sellIn - 1;
-            }
-
-            if (items[i].sellIn < 0) {
-                if (!items[i].name.equals("Aged Brie")) {
-                    if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (items[i].quality > 0) {
-                            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                                items[i].quality = items[i].quality - 1;
-                            }
-                        }
-                    } else {
-                        items[i].quality = items[i].quality - items[i].quality;
-                    }
-                } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality = items[i].quality + 1;
-                    }
-                }
-            }
+            fixItemQuality(item);
+            item.sellIn--;
         }
     }
+
+    private static boolean isSpecialItem(Item item, String typeName) {
+        String itemName = item.name != null && !"".equals(item.name) ? item.name.toLowerCase() : "";
+        return itemName.contains(typeName) || itemName.startsWith(typeName);
+    }
+
+    private void updateAgedBrieQuality(Item item) {
+        if (item.sellIn <= 0) {
+            item.quality += 2;
+        } else {
+            item.quality++;
+        }
+    }
+
+    private void updateBackstagePassesQuality(Item item) {
+        if (item.sellIn <= 0) {
+            item.quality = 0;
+        } else if (item.sellIn <= 5) {
+            item.quality += 3;
+        } else if (item.sellIn <= 10) {
+            item.quality += 2;
+        } else {
+            item.quality++;
+        }
+    }
+
+    private void updateConjuredItemQuality(Item item) {
+        if (item.sellIn <= 0) {
+            item.quality -= 4;
+        } else {
+            item.quality -= 2;
+        }
+    }
+
+    private void updateNormalItemQuality(Item item) {
+        if (item.sellIn <= 0) {
+            item.quality -= 2;
+        } else {
+            item.quality--;
+        }
+    }
+
+    private void fixItemQuality(Item item) {
+        if (item.quality < Constants.MIN_QUALITY) {
+            item.quality = Constants.MIN_QUALITY;
+        } else if (item.quality > Constants.MAX_QUALITY) {
+            item.quality = Constants.MAX_QUALITY;
+        }
+    }
+
 }

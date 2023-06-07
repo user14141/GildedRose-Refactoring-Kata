@@ -1,64 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gildedrose.GildedRoseTest" time="0.016" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gildedrose.GildedRoseTest" time="0.033" tests="12" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="sun.desktop" value="gnome"/>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.specification.version" value="19"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/test-classes:/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/classes:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/rgale/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rgale/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/rgale/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/rgale/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
-    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
-    <property name="user.timezone" value=""/>
-    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="os.name" value="Linux"/>
-    <property name="user.country" value="GB"/>
+    <property name="java.vm.specification.version" value="19"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire/surefirebooter5814913908110709224.jar /home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire 2023-06-07T16-34-51_264-jvmRun1 surefire7217576536118574020tmp surefire_04628008577085063344tmp"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/home/rgale/.jdks/openjdk-19.0.2/lib"/>
+    <property name="sun.java.command" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire/surefirebooter8425468473443796655.jar /home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire 2023-06-07T16-38-32_864-jvmRun1 surefire10204408967758345365tmp surefire_012692367051998112427tmp"/>
+    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/test-classes:/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/classes:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/rgale/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rgale/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/rgale/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/rgale/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/rgale/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/rgale"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="/home/rgale/.jdks/corretto-1.8.0_372/jre"/>
-    <property name="basedir" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="/home/rgale/.jdks/openjdk-19.0.2"/>
     <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire/surefirebooter5814913908110709224.jar"/>
-    <property name="sun.boot.class.path" value="/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/resources.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/rt.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/sunrsasign.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/jsse.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/jce.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/charsets.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/jfr.jar:/home/rgale/.jdks/corretto-1.8.0_372/jre/classes"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata/target/surefire/surefirebooter8425468473443796655.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_372-b07"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
     <property name="user.name" value="rgale"/>
+    <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="5.19.0-43-generic"/>
-    <property name="java.endorsed.dirs" value="/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/endorsed"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="localRepository" value="/home/rgale/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="idea.version" value="2023.1.2"/>
-    <property name="java.version" value="1.8.0_372"/>
+    <property name="java.version" value="19.0.2"/>
     <property name="user.dir" value="/home/rgale/Documents/GitHub/GildedRose-Refactoring-Kata"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.vendor" value="Amazon.com Inc."/>
-    <property name="java.vm.version" value="25.372-b07"/>
-    <property name="java.specification.maintenance.version" value="4"/>
-    <property name="java.ext.dirs" value="/home/rgale/.jdks/corretto-1.8.0_372/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="52.0"/>
+    <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="foo" classname="com.gildedrose.GildedRoseTest" time="0.01"/>
+  <testcase name="agedBrieIncreasesQualityTest" classname="com.gildedrose.GildedRoseTest" time="0.012"/>
+  <testcase name="negativeQualityTestTest" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="backstageIncreaseQualityFasterBetween10And2SellInTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="legendaryItemBehaviourTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstageIncreaseQualityWith5SellInTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityDegradationNegativeSellInConjuredTest" classname="com.gildedrose.GildedRoseTest" time="0"/>
+  <testcase name="backstagePassQualityDropAfterSellInTest" classname="com.gildedrose.GildedRoseTest" time="0"/>
+  <testcase name="qualityDegradationPositiveSellInNormalTest" classname="com.gildedrose.GildedRoseTest" time="0"/>
+  <testcase name="qualityNotHigherThanFiftyTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityDegradationPositiveSellInConjuredTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstageIncreaseQualityTest" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityDegradationNegativeSellInNormalTest" classname="com.gildedrose.GildedRoseTest" time="0"/>
 </testsuite>
